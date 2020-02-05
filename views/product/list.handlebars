@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>Products</h1>
+        </div>
+        {{#each products}}
+        <div class="col-12 col-6 product-list-item">
+            <div class="text-center">
+                <img class="img-fluid" src={{ pictures.[0] }} />
+            </div>
+            <h3><a href="/products/{{ _id }}">{{ name }}</a></h3>
+            <p>Created : {{ date }}</p>
+            <hr />
+        </div>
+        {{/each}}
+    </div>
+</div>

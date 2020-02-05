@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>Message</h1>
+            <form method="POST" action="/messages">
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea class="form-control" name="content" id="content" rows="3"></textarea>
+                </div>
+                <input type="hidden" name="product" value="{{ productId }}" />
+                <input type="hidden" name="user" value="{{ user._id }}" />
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

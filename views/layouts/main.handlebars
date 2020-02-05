@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <!-- Check the file src/defaults.js -->
+    {{#each stylesheets }}
+    <link rel="stylesheet" href="{{{href}}}" />
+    {{/each}}
+</head>
+
+<body>
+    {{> nav }}
+    {{{ body }}}
+    <!-- Check the file src/defaults.js -->
+    {{#each scripts }}
+    <script src="{{{src}}}" {{#if async}}async{{/if}} {{#if defer}}defer{{/if}}></script>
+    {{/each}}
+</body>
+
+</html>

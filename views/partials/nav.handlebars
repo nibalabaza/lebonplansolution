@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="navbar-brand" href="/" title="{{ page.title }}">
+        <img src="/img/logo.png" alt="{{ page.title }}" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {{#if isHomePage }}active{{/if}}">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown  {{#if isProductsPage }}active{{/if}}">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Cities
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/products/cities/paris">Paris</a>
+                    <a class="dropdown-item" href="/products/cities/lyon">Lyon</a>
+                    <a class="dropdown-item" href="/products/cities/marseille">Marseille</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            {{#if isAdmin }}
+            <li class="nav-item  {{#if isAdminPage }}active{{/if}}">
+                <a class="nav-link" href="/admin">Admin</a>
+            </li>
+            {{/if}}
+            {{#unless isAuthenticated }}
+            <li class="nav-item  {{#if isLoginPage }}active{{/if}}">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item  {{#if isSignupPage }}active{{/if}}">
+                <a class="nav-link" href="/signup">Signup</a>
+            </li>
+            {{/unless}}
+            {{#if isAuthenticated }}
+            <li class="nav-item  {{#if isProfilePage }}active{{/if}}">
+                <a class="nav-link" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item  {{#if isLogoutPage }}active{{/if}}">
+                <a class="nav-link" href="/logout">Log out</a>
+            </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>

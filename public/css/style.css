@@ -1,0 +1,128 @@
+/**
+ * BASE
+ *
+ * Blue: #1E3D59
+ * Beige: #F5F0E1
+ * Orange: #FF6E40
+ * Gold: #FFC13B
+ */
+
+/**
+ * OVERRIDE
+ */
+nav.navbar-dark {
+    background-color: #1E3D59;
+}
+
+.btn-primary {
+    background-color: #FFC13B;
+    border-color: #FFC13B;
+}
+.btn-primary:hover {
+    background-color: #E4AC35;
+    border-color: #E4AC35;
+    
+}
+
+.form-control:focus {
+    border-color: #FFC13B;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 59, .25);
+}
+
+/* BASE */
+body {
+    background-color: #F5F0E1;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #FF6E40;
+    font-family: 'Monda', sans-serif;
+    font-weight: bold;
+}
+
+/* NAV */
+.navbar-brand img {
+    height: 30px;
+}
+
+/* PRODUCT */
+/* .carousel.slide {
+    margin: 0 auto;
+} */
+/* .carousel.slide .carousel-item {
+    height: 350px;
+} */
+.carousel {
+    margin: 0 auto;
+}
+.carousel-img {
+    height: 350px;
+}
+.carousel img {
+    height: 350px;
+}
+
+/* PRODUCT LIST */
+
+.product-list-item img {
+    height: 200px;
+}
+
+/* ADD PRODUCT https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ */
+.form-control-file {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.form-control-file + label {
+    font-size: 1.25em;
+    color: #F5F0E1;
+    background-color: #1E3D59;
+    border: 2px solid #1E3D59;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 3px 10px;
+}
+
+.form-control-file:focus + label,
+.form-control-file + label:hover {
+    background-color: #F5F0E1;
+    color: #1E3D59;
+}
+
+/* HOME */
+#map {        
+    max-width: 100%;
+    max-height: 100%;
+}
+#map path {
+    fill:#1E3D59;
+    stroke:#FFFFFF;
+    stroke-width:0.6;
+    transition: fill 0.2s, stroke 0.3s;
+}
+#map path:hover {
+    fill: #264d70;
+}
+#map .separator {
+    stroke: #ccc;
+    fill: none;
+    stroke-width:1.5;
+}
+#map .separator:hover {
+    stroke: #ccc;
+    fill: none;
+}
+#map .selected {
+    fill: #FF6E40;
+    cursor: pointer;
+}
+#map .selected:hover{
+    fill: #FFC13B;
+}
+
